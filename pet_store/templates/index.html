@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+</head>
+<style>
+    .r1{
+        background-image: url("https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: 1;
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+    }
+    .r1::before{
+        content: "";
+        z-index: -1;
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.585);
+    }
+    .r2{
+        background-color: rgba(0, 0, 0, 0.045);
+    }
+    .r3{
+        background-color: rgba(0, 0, 0, 0.025);
+        padding-bottom: 60px;
+    }
+    .navbar, .r1 {
+      position: relative;
+      z-index: 2;
+    }
+    .navbar-brand{
+        font-weight: bold;
+        font-size: 20px;
+        color: #f7c04a;
+    }
+
+    .navbar-brand:hover{
+        color: white;
+    }
+
+    .nav-link{
+        color: #f7c04a;
+    }
+
+    .nav-link:hover{
+        color: white;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(0,0,0)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    } 
+
+    .navbar-button {
+        margin-top: 0.2rem;
+        padding: 0.2rem 3.0rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 50px;
+        background-color: #f7c04a;
+        color: black;
+        text-decoration: none;
+    }
+
+    .navbar-button:hover {
+        background-color: #e6ad39;
+        color: black;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .c1 p {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .c2 p {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .hero-button {
+      margin-top: 1.5rem;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 50px;
+      background-color: #f7c04a;
+      color: black;
+      text-decoration: none;
+    }
+
+    .hero-button:hover {
+      background-color: #e6ad39;
+      color: black;
+      box-shadow: 0 5px 10px rgba(66, 93, 66, 0.6);
+    }
+
+    .hero-card1{
+      text-align: center;
+      padding: 20px 30px;
+      color: #f7c04ade;
+      background-color: rgba(0, 0, 0, 0.607);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease-in-out;
+      height: 150px;
+
+    }
+    .hero-card1:hover{
+      transform:translateY(-5px);
+    }
+
+    .hero-table td{
+      padding: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .c1{
+            text-align: center;
+            padding: 2rem 0;
+        }
+    }
+    .about-img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .about-border{
+        border-left: 5px solid #f7c04a;
+    }
+    .yellow{
+        color: #f7c04a;
+    }
+    .services-border{
+        border-left: 5px solid #f7c04a;
+    }
+    .service-card{
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    width: 450px;
+    height: 250px;
+    font-family: sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+
+    }
+    .service-card:hover{
+    background-color: #f7c04a;
+    color: white;
+    transform:translateY(-5px);
+    }
+    .icon-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #f7c04a;
+        margin: 0 auto 15px;
+        font-size: 24px;
+        color: white;
+        padding: 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .service-card:hover .icon-circle{
+        background-color: white;
+        color: #f7c04a;
+    }
+    .scroll-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 5px;
+        padding: 20px;
+    }
+
+        .scroll-container::-webkit-scrollbar {
+        display: none; /* Hide scrollbar */
+    }
+
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="row r1 ">
+            <div class="col-lg c1 p-lg-5">
+                <nav class="navbar navbar-expand-lg ">
+                    <a class="navbar-brand ms-4" href="#">PETIVERSE</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active  ms-3" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  ms-3" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ms-3" href="#services">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ms-3" href="#products">products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ms-3 me-5" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark px-4 ms-3 me-5 navbar-button" href="#">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg-7 c1 p-lg-5">
+                <h1 class="text-light">A Whole Universe Of Pets</h1>
+                <p class="text-light"> Discover adoption, care, products, and stories that make tails wag and whiskers purr.</p><br>
+                <a href="" class="hero-button">Explore More</a>
+            </div>
+            <div class="col-lg-5 c1 p-lg-5 mt-3 ">
+                <table class="hero-table">
+                    <tr>
+                      <td>
+                        <div class="hero-card1" >
+                          <div class="card-body">
+                            <i class="fas fa-shopping-cart"></i>  
+                            <p class="card-text white">Shop with Love</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="hero-card1" >
+                          <div class="card-body">
+                            <i class="fas fa-dog"></i>  
+                            <p class="card-text white">A Tail of Happiness</p>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td>
+                        <div class="hero-card1">
+                          <div class="card-body">
+                            <i class="fas fa-home"></i>   
+                            <p class="card-text white">Bring Home Joy</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="hero-card1">
+                          <div class="card-body">
+                            <i class="fas fa-heart"></i>
+                            <p class="card-text white">Care You Can Trust</p>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+            </div>
+        </div>
+        <div class="row r2">
+            <div class="col-lg-6 p-5 c2">
+                <img src="https://images.pexels.com/photos/3299905/pexels-photo-3299905.jpeg" class="about-img">
+            </div>
+            <div class="col-lg-6 p-5 c2">
+                <div class="about-border px-4">
+                    <h5 class="yellow">ABOUT US</h5>
+                    <h2>Welcome to Petiverse <br> Your Complete Pet Companion Platform!</h2>
+                </div>
+                <div class="pt-5 fs-5">
+                    <p>At Petiverse, we believe that pets deserve more than just care they deserve convenience, comfort, and connection. Our web-based Pet Store Management System is designed to bring everything a pet owner, seller, or trainer needs into one digital platform. Whether you're buying a new furry friend, selling pet accessories, connecting with professional trainers, or managing vaccination schedules we make it effortless.</p>
+                    <p>We're not just a pet store; we're a <b>one-stop ecosystem</b> for pets, owners, vets, and trainers. From managing pet records to booking health checkups, we streamline it all with efficiency, accuracy, and ease. Petiverse is where technology meets tail wags and happy paws.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row r3 ">
+            <div class="col-lg p-lg-5">
+                <div class="services-border px-4">
+                    <h5 class="yellow">SERVICES</h5>
+                    <h2>More than a store <br> A Full Service Pet Experience</h2>
+                </div>
+            </div>
+            <div class="col-lg-12  c3">
+
+                <div class="scroll-container" id="scroll-container">
+            
+                    <div class="col-lg-4">
+                    <div class="service-card">
+                      <div class="card-body">
+                        <i class="fa-solid fa-heart icon-circle"></i>
+                        <h5 class="card-title">Pet Listing & Adoption</h5>
+                        <p class="card-text">Buy, sell, or adopt pets through a user-friendly platform connecting pet lovers and sellers.</p>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4">
+                    <div class="service-card">
+                      <div class="card-body">
+                        <i class="fa-solid fa-basket-shopping icon-circle"></i>
+                        <h5 class="card-title">Pet Food & Accessories Shop</h5>
+                        <p class="card-text">Order quality pet food, toys, grooming tools, and accessories — all in one place.</p>
+                      </div>
+                    </div>
+          </div>
+          <div class="col-lg-4">
+                    <div class="service-card">
+                      <div class="card-body">
+                        <i class="fa-solid fa-notes-medical icon-circle"></i>
+                        <h5 class="card-title">Vaccination & Health Records</h5>
+                        <p class="card-text">Track your pet's vaccination history and receive timely health reminders.</p>
+                      </div>
+                    </div>
+      </div>
+                  <div class="col-lg-4">
+                    <div class="service-card">
+                      <div class="card-body">
+                        <i class="fa-solid fa-circle-play icon-circle"></i>
+                        <h5 class="card-title">Training Videos & Tips</h5>
+                        <p class="card-text">Access pet training videos and health tips shared by professional trainers.</p>
+                      </div>
+                    </div>
+                  </div>  
+                  <div class="col-lg-4">
+                    <div class="service-card">
+                      <div class="card-body">
+                        <i class="fa-solid fa-credit-card icon-circle"></i>
+                        <h5 class="card-title">Order & Payment Tracking</h5>
+                        <p class="card-text">View your order history, manage cart items, and track payments securely.</p>
+                      </div>
+                    </div>
+                  </div>  
+                  <div class="col-lg-4">
+                    <div class="service-card">
+                      <div class="card-body">
+                        <i class="fa-solid fa-comments icon-circle"></i>
+                        <h5 class="card-title">Live Chat with Trainers/Vets</h5>
+                        <p class="card-text">Get expert guidance anytime through instant messaging with professionals.</p>
+                      </div>
+                    </div>
+                  </div>  
+                  <div class="col-lg-4">
+                    <div class="service-card">
+                      <div class="card-body">
+                        <i class="fa-solid fa-id-badge icon-circle"></i>
+                        <h5 class="card-title">Pet Store & Trainer Registration</h5>
+                        <p class="card-text">Pet stores and trainers can register, manage profiles, and connect with users directly.</p>
+                      </div>
+                    </div>
+                  </div>  
+      
+                </div>
+      
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+
+
+        const scrollContainer = document.getElementById('scroll-container');
+        let scrollAmount = 0;
+        const scrollStep = 460; // pixels per step
+        const delay = 2500; // ms between slides
+
+        function autoScroll() {
+        if (scrollAmount >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+            scrollAmount = 0; // Reset to start
+        } else {
+            scrollAmount += scrollStep;
+        }
+        scrollContainer.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+        }
+
+        setInterval(autoScroll, delay);
+
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
