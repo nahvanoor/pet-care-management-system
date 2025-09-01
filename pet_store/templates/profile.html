@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container mt-5 mb-5">
+        <div class="card shadow-lg p-4">
+            <h1 class="text-center p-lg-3">Profile</h1>
+            <div class="table-responsive">
+                <table class="table table-hover table-striped table-bordered">
+                    <tr>
+                        <th>First Name</th>
+                        <td>{{user.firstname}}</td>
+                    </tr>
+                    <tr>
+                        <th>Last Name</th>
+                        <td>{{user.lastname}}</td>
+                    </tr>
+                    <tr>
+                        <th>Gender</th>
+                        <td>{{user.gender}}</td>
+                    </tr>
+                    <tr>
+                        <th>Phone Number</th>
+                        <td>{{user.phone_number}}</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td>{{user.email}}</td>
+                    </tr>
+                    <tr>
+                        <th>Username</th>
+                        <td>{{login.username}}</td>
+                    </tr>
+                    <tr>
+                        <th>Password</th>
+                        <td>{{login.password}}</td>
+                    </tr>
+                    <tr>
+                        <th>Action</th>
+                        <td>
+                            <a href="/edit_profile/{{login.id}}/" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

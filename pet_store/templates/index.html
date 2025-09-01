@@ -195,6 +195,92 @@
         display: none; /* Hide scrollbar */
     }
 
+    .card-title{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.why-us{
+  border-style: none;
+  padding: 10px;
+  height: 300px;
+  text-align: center;
+  font-family: sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  background-color: #fff;
+  margin: 30px;
+  transition: all 0.3s ease-in-out;
+
+}
+.why-us:hover {
+  border:1px solid #f7c04a;
+  transform:translateY(-5px);
+  box-shadow: 0 5px 10px rgba(66, 93, 66, 0.6);
+
+}
+.why-us:hover .icon-circle1{
+  zoom: 120%;
+  background-color: #f7c04a;
+  color: white;
+
+}
+.icon-circle1 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f7c04a52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 24px;
+  color: #f7c04a;
+}
+
+  .circle-icon3{
+  border-radius: 100%;
+  width: 350px;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+.profile {
+  position: relative;
+  width: 350px; /* match image size */
+  height: 340px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.info-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.profile:hover .info-overlay {
+  opacity: 1;
+}
+
+.info-overlay h3{
+  margin: 0;
+  font-size: 14px;
+}
 </style>
 <body>
     <div class="container-fluid">
@@ -217,13 +303,16 @@
                                 <a class="nav-link ms-3" href="#services">Services</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link ms-3" href="#why-us">Why Us</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link ms-3" href="#products">products</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link ms-3 me-5" href="#">Contact</a>
+                                <a class="nav-link ms-3 me-5" href="contact">Contact</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark px-4 ms-3 me-5 navbar-button" href="#">Login</a>
+                                <a class="nav-link text-dark px-4 ms-3 me-5 navbar-button" href="login">Login</a>
                             </li>
                         </ul>
                     </div>
@@ -276,7 +365,7 @@
                   </table>
             </div>
         </div>
-        <div class="row r2">
+        <div class="row r2" id="about">
             <div class="col-lg-6 p-5 c2">
                 <img src="https://images.pexels.com/photos/3299905/pexels-photo-3299905.jpeg" class="about-img">
             </div>
@@ -291,7 +380,7 @@
                 </div>
             </div>
         </div>
-        <div class="row r3 ">
+        <div class="row r3" id="services">
             <div class="col-lg p-lg-5">
                 <div class="services-border px-4">
                     <h5 class="yellow">SERVICES</h5>
@@ -369,6 +458,360 @@
                 </div>
       
         </div>
+        <div class="row" id="why-us">
+            <div class="col-lg-6 p-5 c4">
+              <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" alt="" class="about-img">
+            </div>
+            <div class="col-lg-6 p-5 c4">
+                <div class="about-border px-4">
+                    <h5 class="yellow">WHY CHOOSE US?</h5>
+                    <h2>Because Your Pets Deserve the Best!</h2>
+                </div>
+                <div class="pt-5 fs-5">
+                    <p>At Petiverse, we believe pet care should be simple, smart, and accessible to everyone. Our platform brings together everything you need — from buying and selling pets to connecting with trainers and vets — all in one place. With powerful automation, secure transactions, and an easy-to-use interface, we ensure that both pet lovers and store owners can manage their needs quickly and efficiently. Whether you’re looking for trusted accessories, booking a health checkup, or learning expert tips, Petiverse is your complete companion in the world of pets.</p>
+                    
+                </div>
+            </div>
+            <div class="col-lg p-lg-5 c4">
+        <table class="table-card3">
+          <tr>
+            <td>
+              <div class="why-us">
+                <div class="card-body">
+                    <i class="fas fa-paw icon-circle1"></i><br>
+                  <h5 class="card-title">All-in-One Platform</h5>
+                  <p class="card-text">Pets, trainers, vets, food, and accessories all in one seamless platform for complete pet care management.</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="why-us">
+                <div class="card-body">
+                    <i class="fas fa-bolt icon-circle1"></i><br>
+                  <h5 class="card-title">Smart & Fast</h5>
+                  <p class="card-text">Automated processes deliver instant responses and real-time updates to save time and enhance efficiency.</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="why-us">
+                <div class="card-body">
+                    <i class="fas fa-smile icon-circle1"></i><br>
+                  <h5 class="card-title">User-Friendly</h5>
+                  <p class="card-text">Intuitive and easy-to-use interface ensures a smooth experience for all users, regardless of technical skills.</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="why-us">
+                <div class="card-body">
+                    <i class="fas fa-shield-alt icon-circle1"></i><br>
+                  <h5 class="card-title">Reliable & Secure</h5>
+                  <p class="card-text"> Accurate information and safe, trusted transactions protect your data and give peace of mind.</p>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table><br><br>
+        </div>
+        <div class="row" id="products">
+          <div class="col-lg-12 p-lg-5">
+                <div class="about-border px-4">
+                    <h5 class="yellow">Pets</h5>
+                    <h2>Find your perfect companion <br> one paw at a time</h2>
+                </div><br>
+                <div class="scroll-container" id="scroll-container2">
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://images.pexels.com/photos/30818631/pexels-photo-30818631.jpeg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Labrador Retriever Puppy</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://images.pexels.com/photos/1644767/pexels-photo-1644767.jpeg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Persian Cat</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://images.pexels.com/photos/342214/pexels-photo-342214.jpeg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>German Shepherd</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://images.pexels.com/photos/8075320/pexels-photo-8075320.jpeg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Siamese Kitten</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://images.pexels.com/photos/2759564/pexels-photo-2759564.jpeg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Golden Retriever</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://images.pexels.com/photos/31238370/pexels-photo-31238370.jpeg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Love Birds Pair</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://images.pexels.com/photos/33485063/pexels-photo-33485063.jpeg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Macaw Parrot</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://images.pexels.com/photos/29704986/pexels-photo-29704986.jpeg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Betta Fish</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://images.pexels.com/photos/4520484/pexels-photo-4520484.jpeg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Hamster</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://images.pexels.com/photos/10595522/pexels-photo-10595522.jpeg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Rabbit (Mini Lop)</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 p-lg-5">
+                <div class="about-border px-4">
+                    <h5 class="yellow">Pet Food</h5>
+                    <h2>Nutritious meals for a happier <br> healthier pet</h2>
+                </div><br>
+                <div class="scroll-container" id="scroll-container2">
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://assets.iceland.co.uk/i/iceland/pedigree_dry_complete_adult_dog_chicken_and_vegetables_3kg_93233_T1.jpg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Pedigree Adult Dog Food</h3>
+                      </div>
+                    </div>
+                  </div>
+                
+
+                <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://cdn.royalcanin-weshare-online.io/g1bLTIcBBKJuub5qRflS/v54/00030111451033-cf-gs1" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Royal Canin Kitten Dry Food</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://tse3.mm.bing.net/th/id/OIP.tnFTnSIu_5A_sG3Hv2wGsQHaHa?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Whiskas Tuna Cat Food</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://onemg.gumlet.io/l_watermark_346,w_690,h_700/a_ignore,w_690,h_700,c_pad,q_auto,f_auto/teaqof0cibfhhrllpnjm.jpg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Drools Puppy Nutrition</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://i5.walmartimages.com/asr/8ca91df6-f6e4-49fc-8ef8-3c6d2c8f0947.e7af3fc64868fc0f07336fc98d2fa5cd.jpeg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Pedigree Dentastix Treats</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://www.petwarehouse.ph/5859-big_default/smartheart-mynah-1kg-bird-food.jpg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>SmartHeart Bird Food</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://www.bunnycart.com/pub/media/catalog/product/cache/a28d3c098923930b60afe6318be0b5fd/t/e/tetrabits_complete_fish_food_30g_100ml_1_1.jpg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Tetra Bits Complete Fish Food</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://www.bigbasket.com/media/uploads/p/xl/40217990_1-purepet-dog-treats-munchy-sticks-mutton-flavour.jpg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>PurePet Munchy Sticks</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://tse2.mm.bing.net/th/id/OIP.agJLIek-wMZy1aQIzh0HNAHaKe?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Royal Canin Dog Wet Food</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://m.media-amazon.com/images/I/71sBejbxdEL._SL1500_.jpg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Himalaya Healthy Treats</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 p-lg-5">
+                <div class="about-border px-4">
+                    <h5 class="yellow">Accessories</h5>
+                    <h2>Style, comfort, and care <br> all for your furry friend</h2>
+                </div><br>
+                
+                <div class="scroll-container">
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://www.thesprucecrafts.com/thmb/DqMiPJud3Ike2ecG26Gn8qaf88M=/2800x1867/filters:fill(auto,1)/AdjustableDogCollar10-cdadf753d6c349afad735e2e89e99bcd.jpg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Adjustable Dog Collar</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://th.bing.com/th/id/R.d0e0dc55b6479390ee24a6a987c78137?rik=WQ2lYLLyXSECKg&riu=http%3a%2f%2fs7d1.scene7.com%2fis%2fimage%2fPETCO%2f946184-center-1&ehk=o4gp2IxXVDs3neUeQadu05RX%2fNt9%2fWoIO8tuZUh4jCM%3d&risl=&pid=ImgRaw&r=0" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Cat Scratching Post</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://i5.walmartimages.com/seo/2024-Pet-Grooming-Brush-Nail-Clippers-Kit-Ergonomic-Pet-Self-Cleaning-Brush-LED-Nail-Clippers-Set-with-File-for-Dogs-Cats-S_f5789ac7-c6f5-4184-b770-74ac62251cd3.e1ef0bbe9711377bd840aa3c064d49a8.jpeg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Pet Grooming Kit</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://m.media-amazon.com/images/I/71aSpwFVqHL.jpg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Comfortable Dog Bed</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://m.media-amazon.com/images/I/613bqeNC5CL._AC_SL1174_.jpg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Cat Litter Box</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://tse1.mm.bing.net/th/id/OIP.0lAilX7N45WXADCkaQ2nowHaHa?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Aquarium Starter Kit</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://m.media-amazon.com/images/I/81gMrirMZBL.jpg" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Bird Cage with Feeder</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://tse3.mm.bing.net/th/id/OIP.XB46dBvrD5KVYoUB5QCYVQHaHk?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Pet Travel Carrier</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://tse1.mm.bing.net/th/id/OIP.GjOkiQj8pMQkZdbEAE6UiAHaFM?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Chew Toys for Dogs</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="profile">
+                      <img src="https://tse4.mm.bing.net/th/id/OIP.TE4dHHJtcNKFHkyA8_kCCQHaHa?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="person1" class="circle-icon3">
+                      <div class="info-overlay">
+                        <h3>Interactive Laser Toy for Cats</h3>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -379,25 +822,26 @@
     <script>
 
 
-        const scrollContainer = document.getElementById('scroll-container');
-        let scrollAmount = 0;
-        const scrollStep = 460; // pixels per step
-        const delay = 2500; // ms between slides
+        const scrollContainer = document.querySelectorAll('.scroll-container');
+        scrollContainer.forEach(scrollContainer => {
+          let scrollAmount = 0;
+          const scrollStep = 460; // pixels per step
+          const delay = 2500; // ms between slides
 
-        function autoScroll() {
-        if (scrollAmount >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
-            scrollAmount = 0; // Reset to start
-        } else {
-            scrollAmount += scrollStep;
-        }
-        scrollContainer.scrollTo({
-            left: scrollAmount,
-            behavior: 'smooth'
+          function autoScroll() {
+          if (scrollAmount >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+              scrollAmount = 0; // Reset to start
+          } else {
+              scrollAmount += scrollStep;
+          }
+          scrollContainer.scrollTo({
+              left: scrollAmount,
+              behavior: 'smooth'
+          });
+          }
+
+          setInterval(autoScroll, delay);
         });
-        }
-
-        setInterval(autoScroll, delay);
-
 
     </script>
 

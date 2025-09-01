@@ -87,15 +87,31 @@
     <div class="container-fluid">
         <div class="row r1 d-flex justify-content-center align-items-center">
 
-            <div class="col-lg-4 col-md-6 col-sm-8 c1 p-lg-5 mt-3">
+            <div class="col-lg-6 col-md-8 col-sm-8 c1 p-lg-5 mt-3">
                 <div class="card shadow-lg p-4 text-center">
-                    <h2 class="text-center p-lg-3 text-dark">Login</h2>
+                    <h2 class="text-center p-lg-3 text-dark">Register</h2>
                     <form action="" method="post">
+                        <input type="text" name="firstname" id="firstname" placeholder="Enter First Name" class="form-control"><br>
+                        <input type="text" name="lastname" id="lastname" placeholder="Enter Last Name" class="form-control"><br>
+                        <label>Select Gender &nbsp;</label>
+                        <input type="radio" name="gender" id="male" value="Male">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female" value="Female">
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="other"  value="other">
+                        <label for="other">Other</label><br><br>
+                        <input type="tel" name="phone_number" id="phone_number" placeholder="Enter Phone Number" class="form-control"><br>
+                        <input type="email" name="email" id="email" placeholder="Enter Email Address" class="form-control"><br>
                         <input type="text" name="username" id="username" placeholder="Enter Username" class="form-control"><br>
                         <input type="password" name="password" id="password" placeholder="Enter Password" class="form-control"><br>
-                        <input type="submit" name="submit" id="submit" value="Login">
+                        <select name="usertype" id="usertype" class="form-control">
+                          <option value="" disabled selected>Select</option>
+                          <option value="user">User</option>
+                          <option value="petstore">Petsore</option>
+                          <option value="trainer">Trainer</option>
+                        </select><br>
+                        <input type="submit" name="submit" id="submit" value="Register">
                     </form>
-                    <p class="text-dark">Don't have an account? <a href="register">Register here</a></p>
                 </div>
             </div>
         </div>
